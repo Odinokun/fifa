@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+  flex-direction: column;
   &::before {
     position: absolute;
     top: 0;
@@ -35,6 +36,10 @@
     @include max(1500) {
       max-width: 1300px;
     }
+    @include max(940) {
+      justify-content: center;
+      min-height: 0;
+    }
     @include max(700) {
       padding: 30px;
     }
@@ -47,6 +52,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @include max(940) {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .index-banner__title {
@@ -63,50 +73,62 @@
   @include max(1500) {
     font-size: 8rem;
   }
-  @include max(425) {
+  @include max(940) {
     font-size: 6rem;
   }
 }
 
 .index-banner__subtitle {
   display: flex;
+  align-items: center;
   margin-bottom: 45px;
-  span {
-    font-family: $din;
-    font-size: 9rem;
-    font-weight: 400;
-    line-height: 8rem;
-    display: inline-block;
-    padding-right: 30px;
-    color: #fff;
-    text-shadow: 0 11px 71.3px rgba(8, 13, 42, .65);
 
-    @include max(425) {
-      font-size: 6rem;
-    }
+  @include max(940) {
+    margin-bottom: 15px;
+  }
+}
+
+.index-banner__subtitle-text {
+  font-family: $din;
+  font-size: 9rem;
+  font-weight: 400;
+  line-height: 8rem;
+  display: inline-block;
+  padding-right: 30px;
+  color: #fff;
+  text-shadow: 0 11px 71.3px rgba(8, 13, 42, .65);
+
+  @include max(940) {
+    font-size: 6rem;
+  }
+}
+
+.index-banner__subtitle-img {
+  width: 100%;
+  max-width: 430px;
+
+  @include max(1500) {
+    max-width: 400px;
+  }
+  @include max(1024) {
+    max-width: 350px;
+  }
+  @include max(940) {
+    max-width: 230px;
   }
   img {
     display: block;
     width: 100%;
-    max-width: 430px;
-
-    @include max(1500) {
-      max-width: 400px;
-    }
-    @include max(1024) {
-      max-width: 350px;
-    }
-    @include max(530) {
-      max-width: 270px;
-    }
-    @include max(425) {
-      max-width: 230px;
-    }
+    height: auto;
   }
 }
 
 .index-banner__text {
   margin-bottom: 50px;
+
+  @include max(940) {
+    margin-bottom: 15px;
+  }
   p {
     font-family: $din-light;
     font-size: 2rem;
@@ -118,6 +140,9 @@
     @include max(1500) {
       font-size: 1.5rem;
     }
+    @include max(940) {
+      max-width: 600px;
+    }
   }
 }
 
@@ -126,6 +151,30 @@
   top: 30px;
   right: 50px;
   max-width: 40rem;
+
+  @include max(1130) {
+    max-width: 33rem;
+  }
+  @include max(1024) {
+    max-width: 38rem;
+  }
+  @include max(940) {
+    display: none;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.index__tickets-mobile {
+  display: none;
+
+  @include max(940) {
+    display: block;
+    max-width: 27rem;
+    margin-bottom: 20px;
+  }
   img {
     display: block;
     width: 100%;
@@ -157,6 +206,10 @@
   width: 230px;
   margin: auto;
   text-decoration: none;
+  @include max(940) {
+    position: relative;
+  }
+
   span {
     font-family: $din-light;
     font-size: 1.82rem;
