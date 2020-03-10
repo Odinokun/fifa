@@ -1,0 +1,17 @@
+extends ../_template
+
+block variables
+  - var title       = ''
+  - var description = ''
+  - var ogtitle     = ''
+  - var ogimage     = ''
+
+block content
+  //begin content
+  main.main
+    include ../sections/index
+    include ../sections/second
+    include ../sections/thnx
+    include ../elements/popup
+  //end content
+

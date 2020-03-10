@@ -1,0 +1,208 @@
+.second {
+  position: relative;
+  display: flex;
+  padding-top: 6.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../img/bg-index.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    opacity: .51;
+    background-color: #080d2a;
+  }
+  .container {
+    position: relative;
+    //padding-top: 30px;
+    //padding-bottom: 30px;
+  }
+}
+
+.second__header {
+  display: flex;
+  @include max(1024) {
+    align-items: center;
+  }
+  @include max(530) {
+    flex-wrap: wrap;
+  }
+  span {
+    font-family: $din;
+    font-size: 3.94rem;
+    font-weight: 400;
+    line-height: 2.94rem;
+    display: inline-block;
+    padding-right: 15px;
+    color: #fff;
+  }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 179px;
+  }
+}
+
+.second__header-title {
+  font-family: $din-bold;
+  font-size: 3.94rem;
+  font-weight: 700;
+  line-height: 2.94rem;
+  padding-right: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  @include max(530) {
+    width: 100%;
+  }
+}
+
+.second__middle {
+  text-align: center;
+  padding-top: 6.88rem;
+  padding-bottom: 1.88rem;
+}
+
+.second__title {
+  font-family: $din-bold;
+  font-size: 7.19rem;
+  font-weight: 700;
+  line-height: 5.38rem;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  @include max(530) {
+  margin-bottom: 2rem;
+    font-size: 6.5rem;
+  }
+  @include max(425) {
+    line-height: 7rem;
+  }
+}
+
+.second__date {
+  font-family: $din-light;
+  font-size: 1.82rem;
+  font-weight: 300;
+  line-height: 2.1rem;
+  color: #fff;
+}
+
+.second-row {
+  width: 100%;
+  background-color: rgba(8, 13, 42, .55);
+  .container {
+    display: flex;
+    @include max(700) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.second-row__item {
+  display: flex;
+  width: 30%;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  &:first-child {
+    flex: none;
+    width: 40%;
+    @include max(700) {
+      width: 100%;
+    }
+  }
+  @include max(700) {
+    width: 50%;
+  }
+  @include max(530) {
+    width: 100%;
+  }
+}
+
+.second-row__number {
+  font-family: $din-bold;
+  font-size: 8.4rem;
+  font-weight: 700;
+  line-height: .75;
+  display: inline-block;
+  flex: none;
+  padding-right: 15px;
+  color: #f47920;
+}
+
+.second-row__text {
+  font-family: $din;
+  font-size: 2.12rem;
+  font-weight: 400;
+  display: inline-block;
+  color: #fff;
+
+  span {
+    font-family: $din-light;
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  a {
+    font-family: $din-light;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.second-btns{
+  width: 100%;
+  padding-top: 6.25em;
+  padding-bottom: 5rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 52rem;
+    width: 100%;
+    @include max(425) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .btn {
+    margin-bottom: 2.5rem;
+    @include max(425) {
+    min-width: 175px;
+
+    }
+  }
+}
+
+.second-footer{
+  text-align: center;
+  padding-bottom: 3.75rem;
+  span {
+    display: block;
+
+    color: #fff;
+    font-family: $din-light;
+    font-size: 1.75rem;
+
+    font-weight: 300;
+
+    b {
+    font-weight: 700;
+      padding-top: 1.57rem;
+      display: inline-block;
+      font-family:$din-bold;
+    }
+  }
+}

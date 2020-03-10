@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $din;
+  font-size: 16px;
+  line-height: 1.38;
+  color: $text;
+  @include max(1500) {
+    font-size: 14px;
+  }
+  @include max(1200) {
+    font-size: 12px;
+  }
+  @include max(1024) {
+    font-size: 10px;
+  }
+  @include max(768) {
+    font-size: 8px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+
+ol,
+ul {
+  li {
+    padding: 0;
+  }
+}
+
+ul {
+  li {
+    // путь к кастомной картинке пункта ul
+    // list-style-image: url('../img/ul.png');
+  }
+}
+
+input,
+textarea,
+select,
+button {
+  border-radius: 0 !important;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input.error,
+textarea.error {
+  border-color: #ed1c24 !important;
+    color: #ed1c24;
+  font-family:$din;
+  &::-webkit-input-placeholder {
+    color: #ed1c24;
+  }
+  &::-moz-placeholder {
+    color: #ed1c24;
+  }
+  &:-ms-input-placeholder {
+    color: #ed1c24;
+  }
+  &:-moz-placeholder {
+    color: #ed1c24;
+  }
+}
+
+svg {
+  display: block;
+  overflow: visible;
+}
+
+.main {
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.btn {
+  font-family: $din-medium;
+  font-size: 2.18rem;
+  font-weight: 500;
+  padding: 1rem 2.18rem;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 5px !important;
+  box-shadow: none;
+  transition: .5s;
+}
+
+.btn--green {
+  background-color: #33a92c;
+  &:hover {
+    background-color: darken(#33a92c, 10%);
+  }
+}
+
+.btn--orange {
+  background-color: #f47920;
+  &:hover {
+    background-color: darken(#f47920, 10%);
+  }
+}

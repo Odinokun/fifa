@@ -1,0 +1,34 @@
+//begin popup
+.popup#popup
+  .container
+    h2.popup__title РЕЄСТРАЦІЯ
+
+    form.popup__form.popup-form#popup-form
+      span.popup-form__input-wrap(data-error='Введiть номер договору')
+        input(name='contract' placeholder='№ Договору*').popup-form__input.popup-form__input--contract
+      span.popup-form__input-wrap(data-error='Введiть iм’я (має містити лише літери)')
+        input(name='name' placeholder='Ім’я*').popup-form__input.popup-form__input--name
+      span.popup-form__input-wrap(data-error='Введiть прізвище (має містити лише літери)')
+        input(name='secondName' placeholder='Прізвище*').popup-form__input.popup-form__input--secondName
+      span.popup-form__input-wrap(data-error='Введiть телефон')
+        input(name='phone' placeholder='Телефон*+38 (___) ___-__-__').popup-form__input.popup-form__input--phone.phone-mask
+      span.popup-form__input-wrap(data-error='Помилка вводу, e-mail має містити символ”@” ')
+        input(name='email' placeholder='Email').popup-form__input.popup-form__input--email
+
+      .popup-form__row.popup-form__row--sale
+        label(for='agreeSale') Я погоджуюся з <a href='#'>умовами акції*</a>
+        input(id='agreeSale' name='agreeSale' type='checkbox').popup-form__checkbox.popup-form__checkbox--sale
+        span.popup-form__custom-checkbox.popup-form__custom-checkbox--sale
+          +svg('check')
+      .popup-form__row.popup-form__row--personal
+        label(for='agreePersonal') Даю згоду на обробку <a href='#'>персональних даних*</a>
+        input(id='agreePersonal' name='agreePersonal' type='checkbox').popup-form__checkbox.popup-form__checkbox--personal
+        span.popup-form__custom-checkbox.popup-form__custom-checkbox--personal
+          +svg('check')
+
+      span.popup-form__ps * обов'язкове поле
+
+      .popup__form-submit
+        input(type='submit' value='ЗАРЕЄСТРУВАТИСЯ').btn.btn--orange
+
+//end popup
