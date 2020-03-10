@@ -23,6 +23,14 @@
   }
   .container {
     position: relative;
+    padding: 0 100px;
+
+    @include max(1500) {
+      max-width: 1300px;
+    }
+    @include max(700) {
+      padding: 0 30px;
+    }
   }
 }
 
@@ -79,8 +87,10 @@
   margin-bottom: 1.25rem;
   color: #fff;
 
+  @include max(1500) {
+    font-size: 6rem;
+  }
   @include max(530) {
-    font-size: 6.5rem;
     margin-bottom: 2rem;
   }
   @include max(425) {
@@ -140,6 +150,10 @@
   flex: none;
   padding-right: 15px;
   color: #f47920;
+
+  @include max(1500) {
+    font-size: 7.5rem;
+  }
 }
 
 .second-row__text {
@@ -149,11 +163,23 @@
   display: inline-block;
   color: #fff;
 
+  @include max(1500) {
+    font-size: 1.7rem;
+  }
+  i {
+    font-style: normal;
+    white-space: nowrap;
+  }
+
   span {
     font-family: $din-light;
     font-size: 1.75rem;
     font-weight: 300;
     line-height: 32px;
+
+    @include max(1500) {
+      font-size: 1.5rem;
+    }
   }
   a {
     font-family: $din-light;
@@ -161,6 +187,10 @@
     font-weight: 300;
     text-decoration: underline;
     color: #fff;
+
+    @include max(1500) {
+      font-size: 1.5rem;
+    }
     &:hover {
       text-decoration: none;
     }
@@ -176,6 +206,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 52rem;
+    padding: 0 30px;
 
     @include max(425) {
       flex-direction: column;

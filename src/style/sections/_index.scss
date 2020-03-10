@@ -30,8 +30,14 @@
     justify-content: space-between;
     align-items: center;
     min-height: 650px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 100px;
+
+    @include max(1500) {
+      max-width: 1300px;
+    }
+    @include max(700) {
+      padding: 30px;
+    }
   }
 }
 
@@ -45,15 +51,17 @@
 
 .index-banner__title {
   font-family: $din-bold;
-  font-size: 9.5rem;
+  font-size: 8.5rem;
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
   text-transform: uppercase;
   color: #fff;
 
-  @include max(530) {
-    font-size: 8.5rem;
+  @include max(1800) {
+  }
+  @include max(1500) {
+    font-size: 8rem;
   }
   @include max(425) {
     font-size: 6rem;
@@ -82,6 +90,9 @@
     width: 100%;
     max-width: 430px;
 
+    @include max(1500) {
+      max-width: 400px;
+    }
     @include max(1024) {
       max-width: 350px;
     }
@@ -112,9 +123,9 @@
 
 .index__tickets {
   position: absolute;
-  top: 0;
-  right: 0;
-  max-width: 43.18rem;
+  top: 30px;
+  right: 50px;
+  max-width: 40rem;
   img {
     display: block;
     width: 100%;
@@ -157,33 +168,64 @@
   }
 }
 
-.index__more-img {
+.chevron-wrap {
   position: relative;
-  width: 86px;
-  height: 74px;
-  img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-  }
+  width: 24px;
+  height: 70px;
 }
 
-@keyframes btnBlink {
-  0% {
-    opacity: 0;
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  transform: scale3d(.5, .5, .5);
+  animation: move 3s ease-out infinite;
+  opacity: 0;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  position: absolute;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  content: ' ';
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
   }
-  50% {
+  33% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+  67% {
+    transform: translateY(40px);
     opacity: 1;
   }
   100% {
+    transform: translateY(55px) scale3d(.5, .5, .5);
     opacity: 0;
   }
-}
-
-.index__more-img--hover {
-  animation: 2.5s btnBlink infinite;
-  opacity: 0;
 }
