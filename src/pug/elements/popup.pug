@@ -13,15 +13,15 @@
       span.popup-form__input-wrap(data-error='Введiть телефон')
         input(name='phone' placeholder='Телефон*+38 (___) ___-__-__').popup-form__input.popup-form__input--phone.phone-mask
       span.popup-form__input-wrap(data-error='Помилка вводу, e-mail має містити символ”@” ')
-        input(name='email' placeholder='Email').popup-form__input.popup-form__input--email
+        input(name='email' placeholder='Email*').popup-form__input.popup-form__input--email
 
       .popup-form__row.popup-form__row--sale
-        label(for='agreeSale') Я погоджуюся з <a href='#'>умовами акції*</a>
+        label(for='agreeSale') Я погоджуюся з <a href='agree.pdf' target='_blank'>умовами акції*</a>
         input(id='agreeSale' name='agreeSale' type='checkbox').popup-form__checkbox.popup-form__checkbox--sale
         span.popup-form__custom-checkbox.popup-form__custom-checkbox--sale
           +svg('check')
       .popup-form__row.popup-form__row--personal
-        label(for='agreePersonal') Даю згоду на обробку <a href='#'>персональних даних*</a>
+        label(for='agreePersonal') Даю згоду на обробку <a href='personal.pdf' target='_blank'>персональних даних*</a>
         input(id='agreePersonal' name='agreePersonal' type='checkbox').popup-form__checkbox.popup-form__checkbox--personal
         span.popup-form__custom-checkbox.popup-form__custom-checkbox--personal
           +svg('check')

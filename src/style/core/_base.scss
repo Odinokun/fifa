@@ -15,8 +15,12 @@ html {
   font-size: 16px;
   line-height: 1.38;
   color: $text;
+
   @include max(1500) {
     font-size: 14px;
+  }
+  @include max(1350) {
+    font-size: 13px;
   }
   @include max(1200) {
     font-size: 12px;
@@ -74,9 +78,9 @@ textarea {
 
 input.error,
 textarea.error {
+  font-family: $din;
+  color: #ed1c24;
   border-color: #ed1c24 !important;
-    color: #ed1c24;
-  font-family:$din;
   &::-webkit-input-placeholder {
     color: #ed1c24;
   }
@@ -114,15 +118,15 @@ svg {
   font-weight: 500;
   padding: 1rem 2.18rem;
   cursor: pointer;
-  white-space: nowrap;
-  text-transform: uppercase;
-  text-decoration: none;
+  transition: .5s;
   text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
   color: #fff;
   border: none;
   border-radius: 5px !important;
   box-shadow: none;
-  transition: .5s;
 }
 
 .btn--green {

@@ -1,9 +1,9 @@
 .index {
-  display: flex;
   position: relative;
+  display: flex;
   justify-content: center;
-  min-height: 100vh;
   align-items: center;
+  min-height: 100vh;
   background-image: url('../img/bg-index.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -14,21 +14,22 @@
     right: 0;
     bottom: 0;
     left: 0;
+    display: none;
     margin: auto;
     content: '';
     opacity: .51;
     background-color: #080d2a;
-    display: none;
+
     @include max(1024) {
       display: block;
     }
   }
   .container {
-  min-height: 650px;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 650px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -44,12 +45,13 @@
 
 .index-banner__title {
   font-family: $din-bold;
-  font-size: 10.5rem;
+  font-size: 9.5rem;
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
   text-transform: uppercase;
   color: #fff;
+
   @include max(530) {
     font-size: 8.5rem;
   }
@@ -63,13 +65,14 @@
   margin-bottom: 45px;
   span {
     font-family: $din;
-    font-size: 10.5rem;
+    font-size: 9rem;
     font-weight: 400;
     line-height: 8rem;
     display: inline-block;
     padding-right: 30px;
     color: #fff;
     text-shadow: 0 11px 71.3px rgba(8, 13, 42, .65);
+
     @include max(425) {
       font-size: 6rem;
     }
@@ -77,7 +80,8 @@
   img {
     display: block;
     width: 100%;
-    max-width: 476px;
+    max-width: 430px;
+
     @include max(1024) {
       max-width: 350px;
     }
@@ -99,6 +103,10 @@
     line-height: 1.2;
     max-width: 491px;
     color: white;
+
+    @include max(1500) {
+      font-size: 1.5rem;
+    }
   }
 }
 
