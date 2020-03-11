@@ -1,6 +1,6 @@
 <?php
 
-$email_to     = "odinokun@gmail.com";
+$email_to     = "oleksii.yereskov@volia.com";
 $email_from     = "fifa@kiev.ua";
 $email_subject  = "ДО ФІНАЛУ З ВОЛЯ";
 $date = new DateTime('now', new DateTimeZone('Europe/Kiev') );
